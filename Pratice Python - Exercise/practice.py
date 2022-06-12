@@ -45,14 +45,43 @@ print("A list: %s" % myList)
 
 # ----------------------- PYTHON STRING OPERATIONS ----------------------------- #
 string = "Hello world!"
-print(len(string))      # calculate length of a string
-print(string.index("o"))    # gets the index of the character
-print(string.count("l"))    # gets the no of occurrences of the character in a string
-print(string[3:7])      # prints a slice of the string, starting at index 3, and ending at index 6
-print(string[3:7:2])    # prints the characters of string from 3 to 7 skipping 2 characters. This is extended slice syntax. The general form is [start:stop:step].
-print(string[::-1])     # syntax to easily reverse a string
-print(string.upper())   # all letters converted to uppercase and lowercase, respectively
-print(string.lower())   # all letters converted to uppercase and lowercase, respectively
-print(string.startswith("Hello"))   # whether the string starts with something or ends with something, respectively.
-print(string.endswith("asdfasdfasdf"))   # whether the string starts with something or ends with something, respectively.
-print(string.split(" "))   # splits the string into a bunch of strings grouped together in a list.
+print(len(string))  # calculate length of a string
+print(string.index("o"))  # gets the index of the character
+print(string.count("l"))  # gets the no of occurrences of the character in a string
+print(string[3:7])  # prints a slice of the string, starting at index 3, and ending at index 6
+print(string[
+      3:7:2])  # prints the characters of string from 3 to 7 skipping 2 characters. This is extended slice syntax. The general form is [start:stop:step].
+print(string[::-1])  # syntax to easily reverse a string
+print(string.upper())  # all letters converted to uppercase and lowercase, respectively
+print(string.lower())  # all letters converted to uppercase and lowercase, respectively
+print(string.startswith("Hello"))  # whether the string starts with something or ends with something, respectively.
+print(string.endswith("asdfasdfasdf"))  # whether the string starts with something or ends with something, respectively.
+print(string.split(" "))  # splits the string into a bunch of strings grouped together in a list.
+
+# ----------------------- PYTHON CONDITIONS ----------------------------- #
+x = 2
+print(x == 2)  # prints out True
+print(x == 3)  # prints out False
+print(x < 3)  # prints out True
+
+# "and" and "or" boolean operators allow building complex boolean expressions
+name = "John"
+age = 23
+if name == "John" and age == 23:
+    print("Your name is John, and you are also 23 years old.")
+
+if name == "John" or name == "Rick":
+    print("Your name is either John or Rick.")
+
+# "in" operator could be used to check if a specified object exists within an iterable object container, such as a list
+if name in ["John", "Rick"]:
+    print("Your name is either John or Rick.")
+
+# the "is" operator does not match the values of the variables, but the instances themselves.
+x = [1, 2, 3]
+y = [1, 2, 3]
+print(x is y)  # Prints out False
+
+# "not" before a boolean expression inverts it
+print(not False)  # Prints out True
+print((not False) == False)  # Prints out False
