@@ -14,7 +14,6 @@ def check_board(game_board, win, size):
     return win
 
 
-
 def check_row(game_board, win, size):
     for x in game_board:
         if x.count(1) == size:
