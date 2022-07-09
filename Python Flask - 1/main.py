@@ -15,5 +15,25 @@ def contact():
     return render_template('contact.html')
 
 
+@app.route('/about/')
+def about():
+    return render_template('about.html')
+
+
+@app.route('/login/')
+def login():
+    return render_template('login.html')
+
+
+@app.route('/register/')
+def register():
+    return render_template('register.html')
+
+
+@app.errorhandler(404)
+def page_error(e):
+    return render_template('error.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
